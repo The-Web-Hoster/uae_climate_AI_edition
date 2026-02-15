@@ -1,6 +1,7 @@
-<html lang="en" class="">
-  <plasmo-csui></plasmo-csui>
-  <head>
+<html lang="en" class=""><plasmo-csui></plasmo-csui><head><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style></head><plasmo-csui id="qaiUnderlineWordShadowHostEl"></plasmo-csui><body id="mainBody"><plasmo-csui></plasmo-csui>
+  
     <link rel="icon" type="image/png" href="Picture1.png" "="">
 			<style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
@@ -329,24 +330,24 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         font-weight: 900;
       }
     </style>
-  </head>
+  
   <plasmo-csui id="qaiChromeosQuestionnaireShadowHostEl"></plasmo-csui>
   <plasmo-csui id="qaiSidebarShadowHostEl" style="position: absolute; left: 0px; top: 0px;"></plasmo-csui>
   <plasmo-csui id="qaiWebPageCopilotShadowHostEl"></plasmo-csui>
   <plasmo-csui id="qaiUnderlineWordShadowHostEl"></plasmo-csui>
-  <body id="mainBody">
+  
     <div id="flash-overlay"></div>
     <div id="tv-static"></div>
     <nav>
       <div style="display:flex; align-items:center;">
         <span class="pulse"></span>
-        <div id="clock">10:53:00</div>
+        <div id="clock">11:37:51</div>
       </div>
       <div class="nav-links">
         <button class="nav-btn" onclick="trigger('home', this)">WELCOME</button>
-        <button class="nav-btn" onclick="trigger('data', this)">CLIMATE DATA</button>
-        <button class="nav-btn" onclick="trigger('co2', this)">CO2 ANALYSIS</button>
-        <button class="nav-btn active" onclick="trigger('ai', this)">NEURAL LINK</button>
+        <button class="nav-btn active" onclick="trigger('data', this)">CLIMATE DATA</button>
+        
+        <button class="nav-btn" onclick="trigger('ai', this)">NEURAL LINK</button>
         <button id="fxBtn" class="nav-btn fx-toggle-btn" onclick="toggleFX()">VISUAL FX: ON</button>
       </div>
     </nav>
@@ -380,7 +381,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           <p style="line-height:2; font-size:1.3em;">Welcome to the website of the future. This terminal monitors the Arabian Peninsula's environmental shifts by cross-referencing satellite data with carbon emission metrics. Our goal is to provide a transparent look at the UAE's journey towards climate change.</p>
         </div>
       </section>
-      <section id="data" class="section">
+      <section id="data" class="section active">
         <div class="card">
           <h2 style="color:var(--purple); font-family: 'Orbitron'; margin-bottom: 20px;">Why This Research Matters</h2>
           <p style="line-height: 1.8; font-size: 1.2em; color: #eee; margin-bottom: 15px;">Carbon management is the defining challenge for the UAE's future. The "Thermal Trap" phenomenon means that as global temperatures rise, the UAE requires significantly more energy for district cooling and desalination (which provides 90% of our water). Currently, AC alone consumes up to 70% of peak electricity. Breaking this cycle via the **UAE Net Zero 2050** strategic initiative is critical for preserving our coastline and ensuring water security for future generations.</p>
@@ -390,23 +391,23 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           <div class="grid">
             <div class="box">
               <h4>TEMP</h4>
-              <p id="t">26.9°C</p>
+              <p id="t">27.8°C</p>
             </div>
             <div class="box">
               <h4>UV INDEX</h4>
-              <p id="u">4.75</p>
+              <p id="u">5.7</p>
             </div>
             <div class="box">
               <h4>HUMIDITY</h4>
-              <p id="h">25%</p>
+              <p id="h">26%</p>
             </div>
             <div class="box">
               <h4>WIND</h4>
-              <p id="w">6.3km/h</p>
+              <p id="w">10.9km/h</p>
             </div>
             <div class="box">
               <h4>FEELS LIKE</h4>
-              <p id="at">25.8°C</p>
+              <p id="at">26.7°C</p>
             </div>
             <div class="box">
               <h4>VISIBILITY</h4>
@@ -434,38 +435,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           <div class="uv-row" style="border-color: #ff0000; color: #ff0000;">11+ EXTREME: HIGH RISK. Stay indoors. Burn time &lt; 10 mins.</div>
         </div>
       </section>
-      <section id="co2" class="section">
-        <div class="card">
-          <h2 style="font-family:'Orbitron'; text-align:center; color:var(--purple); margin-bottom:40px;">CARBON SCANNER (ROW LIST)</h2>
-          <div class="input-row">
-            <label>WEEKLY CAR TRAVEL (KM)</label>
-            <input type="number" id="v1" placeholder="0">
-          </div>
-          <div class="input-row">
-            <label>WEEKLY MEAT (G)</label>
-            <input type="number" id="v2" placeholder="0">
-          </div>
-          <div class="input-row">
-            <label>DAILY AC HOURS</label>
-            <input type="number" id="v3" placeholder="0">
-          </div>
-          <div class="input-row">
-            <label>PLASTIC UNITS</label>
-            <input type="number" id="v4" placeholder="0">
-          </div>
-          <div class="input-row">
-            <label>DAILY SCREEN TIME (HRS)</label>
-            <input type="number" id="v5" placeholder="0">
-          </div>
-          <div class="input-row">
-            <label>ANNUAL FLIGHTS</label>
-            <input type="number" id="v6" placeholder="0">
-          </div>
-          <button class="nav-btn" style="width:100%; padding:30px; font-size:2em;" onclick="calc()">EXECUTE FULL SCAN</button>
-          <div id="res" style="text-align:center; margin-top:40px; font-family:'Orbitron'; font-size:4.5em; color:var(--cyan);">[READY]</div>
-        </div>
-      </section>
-      <section id="ai" class="section active">
+      
+      <section id="ai" class="section">
         <iframe src="https://www.chatbase.co/chatbot-iframe/MEHWE2JFpwseIivVqh0Md" frameborder="0" style="
     position: fixed; 
     top: 60%; /* This moves the center point lower than the middle */
@@ -581,6 +552,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
       // --- Keep your CO2 scan, glitch, and other functions untouched ---
       function calc() {
         /* your original code */ }
-    </script>
-  </body>
-</html>
+    </script></body></html>
+  
+
+</body></html>
